@@ -29,7 +29,7 @@ class Facade
 	 */
 	protected static function createFacade(bool $newInstance = false)
 	{
-		$class = static::getFacadeClass() ?: 'ozings\Jwt';
+		$class = static::getFacadeClass() ?: 'ozings\Response';
 
 		if (static::$alwaysNewInstance) {
 			$newInstance = true;
@@ -58,7 +58,7 @@ class Facade
  * @see \ozings\Jwt
  * @mixin \ozings\Jwt
  */
-class Alidayu extends Facade
+class Response extends Facade
 {
     /**
      * 获取当前Facade对应类名（或者已经绑定的容器对象标识）
@@ -67,6 +67,6 @@ class Alidayu extends Facade
      */
     protected static function getFacadeClass()
     {
-        return 'ozings\Alidayu';
+        return 'ozings\Response';
     }
 }
